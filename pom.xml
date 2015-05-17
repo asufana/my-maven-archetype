@@ -6,4 +6,22 @@
   <artifactId>my-maven-archetype</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
+
+  <developers>
+    <developer>
+      <id>asufana</id>
+      <name>Makoto Hanafusa</name>
+      <email>asufanah@gmail.com</email>
+      <url>https://twitter.com/asufana</url>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments />
+    </license>
+  </licenses>
 </project>
