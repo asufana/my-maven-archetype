@@ -1,6 +1,11 @@
-/.classpath
-/.project
-/.settings
-/.DS_Store
-/target
-/release.properties
+
+/target;
+
+# eclipse stuff
+.classpath
+.project
+.settings
+
+# misc
+.DS_Store
+
