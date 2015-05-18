@@ -1,6 +1,31 @@
 
 # my maven archetype
 
+A simple Java8 archetype.
+
+## Builtins
+
+#### Plugins
+
+- maven-compiler-plugin
+- maven-source-plugin
+- maven-javadoc-plugin
+- maven-release-plugin
+- maven-deploy-plugin
+- site-maven-plugin
+
+#### Dependencies
+
+- junit.junit
+- org.slf4j.slf4j-api
+- org.slf4j.slf4j-asimple
+- org.apache.commons.commons-lang3
+- joda-time.joda-time
+- org.projectlombok.lombok
+
+
+## How to use
+
 ### Install archetype
 
 ```
