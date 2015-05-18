@@ -1,9 +1,9 @@
 
 # my maven archetype
 
-### Install
+### Install archetype
 
-```shell
+```
 # git clone https://github.com/asufana/my-maven-archetype
 # cd my-maven-archetype
 # mvn install
@@ -11,7 +11,7 @@
 
 ### Create project
 
-```shell 
+```
 # mvn archetype:generate \
 	-DinteractiveMode=false \
 	-DarchetypeGroupId=com.github.asufana \
@@ -19,5 +19,14 @@
 	-DgroupId={YOUR_GROUP_ID} \
 	-DartifactId={YOUR_ARTIFACT_ID}
 # cd {YOUR_ARTIFACT_ID}
-# mvn eclipse:eclpse
+# mvn eclipse:eclipse
+```
+
+### Release project
+
+Modify scm parameters at pom.xml.
+
+```
+# mvn release:prepare
+# mvn release:perform
 ```
