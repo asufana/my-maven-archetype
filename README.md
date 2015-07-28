@@ -55,3 +55,41 @@ Modify scm parameters at pom.xml.
 # mvn release:prepare
 # mvn release:perform
 ```
+
+### Fetch from github
+
+```pom.xml
+<dependencies>
+    <dependency>
+        <groupId>{YOUR_GROUP_ID}</groupId>
+        <artifactId>{YOUR_ARTIFACT_ID}</artifactId>
+        <version>1.0</version>
+    </dependency>
+</dependencies>
+
+<repositories>
+    <repository>
+        <id>ORMLite</id>
+        <url>https://raw.github.com/{YOUR_ACCOUNT_NAME}/{YOUR_ARTIFACT_ID}/mvn-repo/</url>
+        <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>always</updatePolicy>
+        </snapshots>
+    </repository>
+</repositories>
+```
+
+### Fetch from github for PlayFramework1
+
+```dependencies.yml
+require:
+    - play
+    - {YOUR_GROUP_ID} -> {YOUR_ARTIFACT_ID} [1.0,)
+
+repositories:
+    - github:
+        type:   iBiblio
+        root:   https://raw.github.com/{YOUR_ACCOUNT_NAME}/{YOUR_ARTIFACT_ID}/mvn-repo/
+        contains:
+            - {YOUR_GROUP_ID} -> *
+```
