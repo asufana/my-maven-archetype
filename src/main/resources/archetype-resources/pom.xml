@@ -29,6 +29,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         <configuration>
           <source>${java.version}</source>
           <target>${java.version}</target>
+          <!-- disable annotation processing -->
+          <compilerArgument>-proc:none</compilerArgument>
         </configuration>
       </plugin>
       <plugin>
