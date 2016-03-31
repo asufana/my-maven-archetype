@@ -69,7 +69,7 @@ Modify scm parameters at pom.xml.
 
 <repositories>
     <repository>
-        <id>ORMLite</id>
+        <id>github</id>
         <url>https://raw.github.com/{YOUR_ACCOUNT_NAME}/{YOUR_ARTIFACT_ID}/mvn-repo/</url>
         <snapshots>
             <enabled>true</enabled>
