@@ -3,6 +3,8 @@
 
 A simple Java8 archetype.
 
+
+
 ## Builtins
 
 #### Plugins
@@ -24,11 +26,13 @@ A simple Java8 archetype.
 - org.projectlombok.lombok
 
 
+
+
 ## How to use
 
 ### Install archetype
 
-```
+```sh
 $ git clone https://github.com/asufana/my-maven-archetype
 $ cd my-maven-archetype
 $ mvn install
@@ -36,35 +40,45 @@ $ mvn install
 
 ### Create project
 
-Interactive Mode
+##### Interactive mode
 
-```
+```sh
 $ mvn archetype:generate -DarchetypeGroupId=com.github.asufana -DarchetypeArtifactId=my-maven-archetype -DarchetypeVersion=1.0
 ```
 
-##### Batch Mode
+##### Batch mode
 
-```
+```sh
 $ mvn archetype:generate \
 	-DinteractiveMode=false \
 	-DarchetypeGroupId=com.github.asufana \
 	-DarchetypeArtifactId=my-maven-archetype \
 	-DgroupId={YOUR_GROUP_ID} \
 	-DartifactId={YOUR_ARTIFACT_ID}
+$ cd {YOUR_ARTIFACT_ID}
+$ mvn eclipse:eclipse
 ```
+
+
+
+## Goals
 
 ### Release project
 
 Modify scm parameters at pom.xml.
 
-```
+```sh
 $ mvn release:prepare
 $ mvn release:perform
 ```
 
+
+
+## Misc
+
 ### Fetch from github
 
-```pom.xml
+```xml
 <dependencies>
     <dependency>
         <groupId>{YOUR_GROUP_ID}</groupId>
@@ -87,7 +101,7 @@ $ mvn release:perform
 
 ### Fetch from github for PlayFramework1
 
-```dependencies.yml
+```yaml
 require:
     - play
     - {YOUR_GROUP_ID} -> {YOUR_ARTIFACT_ID} [1.0,)
