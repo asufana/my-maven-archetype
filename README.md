@@ -29,22 +29,28 @@ A simple Java8 archetype.
 ### Install archetype
 
 ```
-# git clone https://github.com/asufana/my-maven-archetype
-# cd my-maven-archetype
-# mvn install
+$ git clone https://github.com/asufana/my-maven-archetype
+$ cd my-maven-archetype
+$ mvn install
 ```
 
 ### Create project
 
+Interactive Mode
+
 ```
-# mvn archetype:generate \
+$ mvn archetype:generate -DarchetypeGroupId=com.github.asufana -DarchetypeArtifactId=my-maven-archetype -DarchetypeVersion=1.0
+```
+
+##### Batch Mode
+
+```
+$ mvn archetype:generate \
 	-DinteractiveMode=false \
 	-DarchetypeGroupId=com.github.asufana \
 	-DarchetypeArtifactId=my-maven-archetype \
 	-DgroupId={YOUR_GROUP_ID} \
 	-DartifactId={YOUR_ARTIFACT_ID}
-# cd {YOUR_ARTIFACT_ID}
-# mvn eclipse:eclipse
 ```
 
 ### Release project
@@ -52,8 +58,8 @@ A simple Java8 archetype.
 Modify scm parameters at pom.xml.
 
 ```
-# mvn release:prepare
-# mvn release:perform
+$ mvn release:prepare
+$ mvn release:perform
 ```
 
 ### Fetch from github
